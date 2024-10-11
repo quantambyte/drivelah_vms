@@ -18,6 +18,8 @@ const PORT = process.env.PORT || 5000;
 
 connectDB();
 
+app.set("trust proxy", true);
+
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
   max: 100, // Limit each IP to 100 requests per windowMs
