@@ -13,7 +13,10 @@ const options = {
     },
     servers: [
       {
-        url: "http://localhost:3000/api", // URL of your local development server
+        url: `https://drivelah-vms.vercel.app/api`,
+      },
+      {
+        url: `http://localhost:3000/api`,
       },
     ],
     components: {
