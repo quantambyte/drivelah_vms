@@ -3,6 +3,7 @@ const express = require("express");
 const rateLimit = require("express-rate-limit");
 const { connectDB, sequelize } = require("./database/db.config");
 const cors = require("cors");
+const helmet = require("helmet");
 const swaggerUi = require("swagger-ui-express");
 const swaggerSpec = require("./swagger/swagger");
 const voucherRoutes = require("./routes/voucher");
@@ -28,6 +29,7 @@ app.use(limiter);
 
 // Middleware
 app.use(cors());
+app.use(helmet());
 app.use(express.json());
 
 // Serve the Swagger documentation
