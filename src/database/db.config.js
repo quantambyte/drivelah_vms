@@ -9,7 +9,8 @@ const sequelize = new Sequelize(
   process.env.DB_PASSWORD,
   {
     host: process.env.DB_HOST,
-    dialect: "mysql", // Using MySQL dialect
+    dialect: "mysql",
+    dialectModule: require("mysql2"),
   }
 );
 
